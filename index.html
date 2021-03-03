@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Audiowide' rel='stylesheet'>
+	<link href="https://fonts.googleapis.com/css2?family=Krona+One&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="http://resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+	<style>
+		body {
+			background-color: #D8F3F0;
+			margin: 0;
+			font-family: 'Comfortaa', cursive;
+			font-size: 20px;
+			list-style: none;
+		}
+
+		.navbar {
+			font-family: 'Audiowide';
+			margin: 0;
+			padding-top: 20rem;
+			width: 300px;
+			background-color: #5ADBD8;
+			position: fixed;
+			height: 100%;
+			overflow: auto;
+		}
+
+			.navbar a {
+				text-align: center;
+				display: block;
+				color: black;
+				padding: 16px;
+				text-decoration: none;
+			}
+
+				.navbar a.logo {
+					color: white;
+					font-size: 30px;
+				}
+
+				.navbar a:hover {
+					color: white;
+				}
+
+			.navbar .icon {
+				display: none;
+			}
+
+		section {
+			margin-left: 350px;
+			padding-top: 3rem;
+			padding-bottom: 5rem;
+			/*max-width: 75rem;*/
+			height: 100%;
+		}
+
+		h1 {
+			padding-bottom: 3rem;
+			font-size: 30px;
+			font-family: 'Krona One', sans-serif;
+		}
+
+		p {
+			font-family: 'Comfortaa', cursive;
+			font-size: 20px;
+		}
+
+
+		#about img {
+			border: 5px black solid;
+			margin-right: 50px;
+			float: right;
+			width: 200px;
+			border-radius: 20px;
+		}
+
+		.cvBtn {
+			background-color: DodgerBlue;
+			border: none;
+			color: white;
+			margin-top: 30px;
+			padding: 12px 30px;
+			cursor: pointer;
+			font-size: 20px;
+		}
+
+		#fileDownload {
+			  background-color: DodgerBlue;
+			  border: none;
+			  color: white;
+			  padding: 12px 30px;
+			  cursor: pointer;
+			  font-size: 20px;
+		}
+
+		table td {
+			width: 300px;
+		}
+
+		#cover {
+			margin-top: 0;
+			margin-left: 300px;
+			padding: 0;
+			width: 400px;
+			height: 100%;
+		}
+
+			#cover img {
+				height: 950px;
+			}
+
+            #cover h1 {
+                font-family: 'Concert One', cursive;
+                position: absolute;
+                font-size: 80px;
+                right: 50px;
+                top: 600px;
+                color: #F5AB60;
+            }
+
+			#cover h1:last-child{
+				top: 720px;
+			}
+
+		#tabs {
+			width: 95%;
+			border: none;
+			background-color: lightblue;
+		}
+
+		@media screen and (max-width: 600px) {
+			#about img {
+				display: none;
+			}
+		}
+
+
+		@media screen and (max-width: 900px) {
+			#cover {
+				margin: 0;
+				padding: 0;
+			}
+				#cover img {
+					display: none;
+				}
+				#cover h1 {
+					display: none;
+				}
+
+
+			section {
+				margin-left: 10px;
+			}
+
+			.navbar {
+				padding: 0;
+				width: 100%;
+				position: relative;
+			}
+
+				.navbar a:not(:first-child) {
+					display: none;
+				}
+
+				.navbar a.icon {
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+		}
+
+		@media screen and (max-width: 900px) {
+			.navbar.responsive {
+				position: relative;
+			}
+
+				.navbar.responsive .icon {
+					position: absolute;
+					right: 0;
+					top: 0;
+				}
+
+				.navbar.responsive a {
+					float: none;
+					display: block;
+					text-align: left;
+				}
+		}
+
+		@media screen and (min-width: 1200px) {
+			#about img {
+				margin-right: 180px;
+			}
+
+			footer {
+				display: none;
+			}
+		}
+	</style>
+</head>
+<body>
+
+	<nav class="navbar" id="myTop" onclick="myFunction()">
+		<a class="logo" href="#cover">Sage's Resume</a>
+		<a href="#about">About Me</a>
+		<a href="#edu">Education</a>
+		<a href="#skills">Skills</a>
+		<a href="#award">Certificates & Awards</a>
+		<a href="#portfo">Portfolio</a>
+		<a href="javascript:void(0);" class="icon">
+			<i class="fa fa-bars"></i>
+		</a>
+	</nav>
+
+
+	<section id="cover">
+		<img src="https://raw.githubusercontent.com/Sagelai/Sagelai.github.io/main/background.png" />
+		<h1>HELLO! I'm Sage</h1>
+		<h1>Nice to meet you</h1>
+	</section>
+
+
+	<section id="about">
+		<img src="https://raw.githubusercontent.com/Sagelai/Sagelai.github.io/main/me.png">
+		<h1>My Information</h1>
+		<img src="me(circle).png" id="small" style="display: none;">
+		<p>Name: Lai Sin Yi (Sage)</p>
+		<p>Birth: 08/10/2003</p>
+		<p>Tel: 55615602</p>
+		<p>Interest: Music, Sport</p>
+		<p>email: sagelai1008@gmail.com</p>
+		
+	</section>
+
+	<hr>
+
+	<section id="edu">
+		<h1>Education</h1>
+
+		<p>Baptist Wing Lung Secondary School</p>
+		<p>2015-2018</p>
+
+		</br>
+
+		<p>Youth College(Tuen Mun)</p>
+		<p>DVE---Information Technology</p>
+		<p>2018-2021</p>
+
+	</section>
+
+	<hr>
+
+	<section id="skills">
+		<h1>Skills</h1>
+
+		<table>
+			<tr>
+				<td>Multimedia Application</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Cyber Security</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Website Develope</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Game Develope</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Word Process</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>UI/UX Design</td>
+				<td><progress></progress></td>
+			</tr>
+		</table>
+
+		<br>
+		<br>
+		<h3 style="font-size: 20px;">Programming Language</h3>
+		<table>
+			<tr>
+				<td>HTML5</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>CSS5</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Javascript</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Java</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>C#</td>
+				<td><progress></progress></td>
+			</tr>
+
+			<tr>
+				<td>Python</td>
+				<td><progress></progress></td>
+			</tr>
+		</table>
+	</section>
+
+	<hr>
+
+	<section id="award">
+		<h1>Certificates & Awards</h1>
+
+		<p>
+			<i class='fas fa-award' style='font-size:25px;color:gold'></i>
+			Merit Award (The 10th Place)---Hong Kong Cyber Security New Generation Capture the Flag Challenge 2020
+		</p>
+
+		<p>
+			<i class='fas fa-award' style='font-size:25px;color:gold'></i>
+			The 16th Place---Joint-School Cyber Security Competition 2020
+		</p>
+	</section>
+
+	<hr>
+
+	<section id="portfo">
+		<h1>Protfolio</h1>
+		<h3 style="padding-top: 20px;">MONKEY SPACE SHOOTER</h3>
+		<img src="https://raw.githubusercontent.com/Sagelai/Sagelai.github.io/main/Game%201.png" width="500px"></img>
+		</br>
+		</br>
+		<button onclick="download()" id="fileDownload"><i class="fa fa-download"></i> Download</button>
+
+	</section>
+
+	
+
+	<footer>
+	</footer>
+	<script>
+		function myFunction() {
+			var x = document.getElementById("myTop");
+			if (x.className === "navbar") {
+				x.className += " responsive";
+			} else {
+				x.className = "navbar";
+			}
+		}
+
+		/*$(function () {
+			$("#tabs").tabs();
+		});*/
+
+		function download() {
+			window.location.href="https://drive.google.com/uc?export=download&confirm=WIvX&id=1HZQMTSvRRIaroIFUmnW-TW0F50tpRq1Y";
+		}
+	</script>
+</body>
+</html>
